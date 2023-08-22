@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Head from "next/head";
 
 export default function Home() {
 
@@ -43,6 +44,7 @@ export default function Home() {
   }
 
   return (
+    <><Head><title>#Nixie - Your friendly AI</title></Head>
     <div className="flex flex-col h-screen">
       <nav className="shadow p-4 flex flex-row justify-between">
         <div className="text-xl font-bold">#Nixie</div>
@@ -70,5 +72,6 @@ export default function Home() {
         <button onClick={sendRequest} className="border rounded-md text-lg hover:bg-black hover:text-white p-4 ml-4">Send</button>
       </div>
     </div>
+    </>
   )
 }
