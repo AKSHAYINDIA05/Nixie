@@ -8,7 +8,7 @@ export default function Home() {
   const [messages, setMessages] = useState([{ role: "system", content: "You are Nixie!! An AI created by the organization #codEasy" }]);
   const [userMessage, setUserMessage] = useState("");
 
-  const API_URL = "https://api.openai.com/v1/chat/completions";
+  const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 
   async function sendRequest() {
@@ -30,7 +30,7 @@ export default function Home() {
         'Authorization':'Bearer '+apiKey,
       },
       body:JSON.stringify({
-        "model":"gpt-3.5-turbo",
+        "model":"llama3-8b-8192",
         "messages":newMessages
       })
     })
